@@ -6,8 +6,7 @@ import org.junit.Test;
 
 public class tc_TwoSum {
     @Test
-    public void tc_1()
-    {
+    public void tc_1() {
         tc_TwoSum tester = new tc_TwoSum();
         TwoSum twoSum = new TwoSum();
         int[]nums = {2, 7, 11, 15};
