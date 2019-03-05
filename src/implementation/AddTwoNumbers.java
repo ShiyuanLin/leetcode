@@ -39,7 +39,7 @@ public class AddTwoNumbers {
             } else {
                 addOne = 0;
             }
-            if (l1 != null || l2!= null) {
+            if (l1 != null || l2 != null) {
                 temp.next = new ListNode(0);
                 temp = temp.next;
             }

@@ -2,6 +2,10 @@ package model;
 
 import java.util.Objects;
 
+/**
+ *  This class is used by the following class(es):
+ *  AddTwoNumbers
+ */
 public class ListNode {
     public int val;
     public ListNode next;
