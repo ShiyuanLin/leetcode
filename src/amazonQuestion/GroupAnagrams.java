@@ -38,6 +38,11 @@ public class GroupAnagrams {
   }
 
   public static void main(String[] args) {
-    System.out.println(groupAnagrams(new String[] {"eat", "tea"}));
+    System.out.println("nifty" instanceof  String);
+    ;
+    List list = new ArrayList();
+    list.add("hello");
+    list.add(2);
+    System.out.println(list.get(1) instanceof Integer);
   }
 }
