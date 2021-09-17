@@ -1,28 +1,30 @@
 package implementation;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MaxSubArrayLen {
-  int maxSubLen;
   public int maxSubArrayLen(int[] nums, int k) {
-    maxSubLen = 0;
-    Arrays.sort(nums);
-    traverse(nums, k, 0, 0, 0);
-    return maxSubLen;
-  }
+    int currLongest = 0;
+    Map<Integer, Integer> sumIndexMap = new HashMap<>();
+    int currSum = 0;
 
-  public void traverse(int[] nums, int target, int i, int current, int len) {
-    current += nums[i];
-    if (current > target) return;
+    for (int i = 0; i < nums.length; i++) {
+      currSum += nums[i];
 
-    len++;
-    if (current == target) {
-      maxSubLen = Math.max(maxSubLen, len);
-      return;
+      if (currSum == k) {
+        currLongest = i + 1;
+      }
+
+      if (sumIndexMap.containsKey(currSum - k)) {
+        currLongest = Math.max(currLongest, i - sumIndexMap.get(currSum - k));
+      }
+
+      if (!sumIndexMap.containsKey(currSum)) {
+        sumIndexMap.put(currSum, i);
+      }
     }
-
-    for (int j = i + 1; j < nums.length; j++) {
-      traverse(nums, target, j, current, len);
-    }
+    return currLongest;
   }
 }
