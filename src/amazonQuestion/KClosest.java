@@ -2,9 +2,6 @@ package amazonQuestion;
 
 import java.util.PriorityQueue;
 
-import static java.lang.StrictMath.abs;
-import static java.lang.StrictMath.min;
-
 public class KClosest {
   public int[][] kClosest(int[][] points, int K) {
     PriorityQueue<int[]> minHeap = new PriorityQueue<>((a, b) ->

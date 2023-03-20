@@ -1,11 +1,5 @@
 package amazonOA;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 public class MinimumTotalContainerSize {
 //  public int minDifficulty(int[] jobDifficulty, int d) {
 //    int n = jobDifficulty.length;

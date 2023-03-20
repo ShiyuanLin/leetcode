@@ -1,7 +1,5 @@
 package amazonOA;
 
-import java.util.Collections;
-
 public class FiveStarReviews {
   public static int fiveStarReviews(int[][] productRatings, int ratingsThreshold) {
     int count = 0;
